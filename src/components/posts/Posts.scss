@@ -1,0 +1,14 @@
+.posts {
+  &-wrapper {
+    .posts-wrapper__cards {
+      display: grid;
+      grid-template-columns: repeat(1, 3fr);
+      gap: 20px;
+      overflow: auto;
+      height: 650px;
+      .post-card {
+        gap: 30px;
+      }
+    }
+  }
+}
