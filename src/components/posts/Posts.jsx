@@ -10,7 +10,7 @@ const Posts = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("/api/posts?style=comedy")
+      .get("https://jsonbek.uz/api/posts?style=comedy")
       .then((res) => setData(res.data))
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
