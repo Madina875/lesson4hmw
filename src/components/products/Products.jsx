@@ -17,26 +17,26 @@ const Products = () => {
   }, []); // mount
   return (
     <section className="products">
-      <div className="container">
-        <div className="products-wrapper user-wrapper">
-          <h2>products</h2>
-          {error && <div style={{ color: "red" }}>{error?.message}</div>}
-          {loading && <div>Loading...</div>}
-          <div className="products-wrapper__cards ">
-            {data?.map((item) => (
-              <div key={item.id} className="products-wrapper__cards-card card">
-                <img src={item.image} alt="" />
-                <div className="desc">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <strong>price: {item.price}$</strong>
-                  <p>rating: {item.rate} ⭐</p>
-                  <p>origin: {item.origin}</p>
-                  <span>available: `{item.available}`</span>
-                </div>
+      {/* <div className="container"> */}
+      <div className="products-wrapper user-wrapper">
+        <h2>products</h2>
+        {error && <div style={{ color: "red" }}>{error?.message}</div>}
+        {loading && <div>Loading...</div>}
+        <div className="products-wrapper__cards ">
+          {data?.map((item) => (
+            <div key={item.id} className="products-wrapper__cards-card card">
+              <img src={item.image} alt="" />
+              <div className="desc">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <strong>price: {item.price}$</strong>
+                <p>rating: {item.rate} ⭐</p>
+                <p>origin: {item.origin}</p>
+                <span>available: `{item.available}`</span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+          {/* </div> */}
         </div>
       </div>
     </section>
